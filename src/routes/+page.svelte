@@ -1,8 +1,10 @@
-<!-- <script>
+<script>
     import { user } from '$lib/sessionStore'
     import { supabase } from '$lib/supabaseClient'
     import Auth from '$lib/Auth.svelte'
     import Profile from '$lib/Profile.svelte'
+    import LoginForm from "$lib/loginForm.svelte";
+
   
     user.set(supabase.auth.user())
   
@@ -17,11 +19,7 @@
     {:else}
     <Auth />
     {/if}
-  </div> -->
-
-  <script>
-    import LoginForm from "$lib/loginForm.svelte";
-  </script>
+  </div>
   
   <div class="container">
     <LoginForm title="Login" />

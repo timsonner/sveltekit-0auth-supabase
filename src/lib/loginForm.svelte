@@ -1,78 +1,44 @@
 <!-- Code from https://github.com/rboddy/supabase-yt-auth -->
 <script>
-    import { supabase } from '$lib/supabaseClient'
-    import { goto } from "$app/navigation";
-    import { user } from '$lib/sessionStore'
-    let email = "";
-    let password = "";
-    // let loading = true
-    export let title;
-  
-    async function handleLogin() {
-    //   if (title == "Login") {
-        const { user, error } = await supabase.auth.signIn({
-          email: email,
-          password: password,
-        });
-        if (user) {
-          goto("/dashboard");
-        } else {
-          console.log(error);
-        }
-    //   } else {
-    //     const { user, error } = await supabase.auth.signUp({
-    //       email: email,
-    //       password: password,
-    //     });
-    //     if (user) {
-    //       goto("/dashboard");
-    //     } else {
-    //       console.log(error);
-    //     }
-    //   }
-    }
+	import { supabase } from '$lib/supabaseClient';
+	import { goto } from '$app/navigation';
 
-    // const handleLogin = async () => {
-    //   try {
-    //     loading = true
-    //     const { user, error } = await supabase.auth.signIn({ 
-    //         email: email,
-    //         password: password 
-    //     })
-    //     if (user) {
-    //       goto("/dashboard");
-    //     }
+	let email = '';
+	let password = '';
+	export let title;
 
-    //     if (error) throw error
-    //     alert(`Error: ${error}`)
-    //   } catch (error) {
-    //     alert(error.error_description || error.message)
-    //   } finally {
-    //     loading = false
-    //   }
-    // }
+	async function handleLogin() {
+		const { user, error } = await supabase.auth.signIn({
+			email: email,
+			password: password
+		});
+		if (user) {
+			goto('/dashboard');
+		} else {
+			console.log(error);
+		}
+	}
+</script>
 
-  </script>
-  
-  <div class="loginFormContainer">
-    <h1>{title}</h1>
-    <form class="loginForm" on:submit|preventDefault={handleLogin}>
-      <input type="email" bind:value={email} placeholder="email@email.com" />
-      <input type="password" bind:value={password} placeholder="Password" />
-      <button type="submit">Login</button>
-    </form>
-    <a href="/signup">Not a Member? Sign up!</a>
-  </div>
-  
-  <style>
+<div class="loginFormContainer">
+	<h1>{title}</h1>
+	<form class="loginForm" on:submit|preventDefault={handleLogin}>
+		<input type="email" bind:value={email} placeholder="email@email.com" />
+		<input type="password" bind:value={password} placeholder="Password" />
+		<button type="submit">Login</button>
+	</form>
+	<a href="/signup">Not a Member? Sign up!</a>
+</div>
+
+<style>
     .loginFormContainer {
       padding: 30px;
       border-radius: 15px;
       box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
-      background-color: #808080;
+      background-color: #4a4444;
     }
     .loginFormContainer > h1 {
-      font-family: "Oswald", sans-serif;
+      font-family: "Courier New", monospace;
       font-size: 3em;
       margin: 0;
     }
@@ -91,24 +57,28 @@
       border-radius: 15px;
       padding: 10px;
       box-sizing: border-box;
+      background-color: rgb(30, 30, 30);
     }
     input:focus {
       outline: none;
     }
+
     button {
       width: 100px;
       height: 40px;
       border: none;
-      background-color: rgb(9, 227, 9);
+      background-color: rgb(63, 63, 63);
       font-size: 1em;
       border-radius: 15px;
       box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
     }
     a {
       text-decoration: none;
-      color: rgb(9, 227, 9);
+      color:rgb(0, 150, 252);
       display: block;
       margin-top: 10px;
     }
-  </style>
-  
+    h1 {
+        color:rgb(213, 213, 213)
+    }
+</style>
