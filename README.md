@@ -1,3 +1,5 @@
+## This project is using the latest SvelteKit as of 10/08/2022
+
 ## install project dependencies
 > npm install
 
@@ -20,3 +22,5 @@
 ## run project
 
 > npm run dev -- --open
+
+partial code source: <https://github.com/rboddy/supabase-yt-auth>

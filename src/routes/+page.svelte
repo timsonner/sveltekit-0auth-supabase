@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
     import { user } from '$lib/sessionStore'
     import { supabase } from '$lib/supabaseClient'
     import Auth from '$lib/Auth.svelte'
@@ -17,4 +17,22 @@
     {:else}
     <Auth />
     {/if}
+  </div> -->
+
+  <script>
+    import LoginForm from "$lib/loginForm.svelte";
+  </script>
+  
+  <div class="container">
+    <LoginForm title="Login" />
   </div>
+  
+  <style>
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100%;
+    }
+  </style>
