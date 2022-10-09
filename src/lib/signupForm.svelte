@@ -53,10 +53,10 @@
       padding: 30px;
       border-radius: 15px;
       box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
-      background-color: #808080;
+      background-color: #4a4444;
     }
     .loginFormContainer > h1 {
-      font-family: "Oswald", sans-serif;
+      font-family: "Courier New", monospace;
       font-size: 3em;
       margin: 0;
     }
@@ -75,24 +75,23 @@
       border-radius: 15px;
       padding: 10px;
       box-sizing: border-box;
+      background-color: rgb(30, 30, 30);
     }
     input:focus {
       outline: none;
     }
+
     button {
       width: 100px;
       height: 40px;
       border: none;
-      background-color: rgb(9, 227, 9);
+      background-color: rgb(63, 63, 63);
       font-size: 1em;
       border-radius: 15px;
       box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
     }
-    /* a {
-      text-decoration: none;
-      color: rgb(9, 227, 9);
-      display: block;
-      margin-top: 10px;
-    } */
-  </style>
-  
+    
+    h1 {
+        color:rgb(213, 213, 213)
+    }
+</style>

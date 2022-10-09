@@ -18,6 +18,7 @@
     <Profile />
     {:else}
     <Auth />
+    <br>
     <a href="https://temp-mail.org/">Get a temporary email address here to test it out!</a>
     {/if}
   </div>
@@ -32,7 +33,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 45vh;
+      height: 60vh;
       width: 100%;
     }
   </style>
