@@ -60,6 +60,7 @@
 
   async function signOut() {
     try {
+      const user = supabase.auth.user()
       loading = true
       let { error } = await supabase.auth.signOut()
       if (error) throw error

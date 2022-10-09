@@ -8,8 +8,16 @@
   
     user.set(supabase.auth.user())
   
-    supabase.auth.onAuthStateChange((_, session) => {
-      user.set(session.user)
+    // supabase.auth.onAuthStateChange((_, session) => {
+    //   user.set(session.user)
+    // })
+    supabase.auth.onAuthStateChange((state, session) => {
+    	if (state == 'SIGNED_IN') {
+    		user.set(session.user)	
+    	} else {
+    		user.set(false);
+    	}
+        
     })
   </script>
   
