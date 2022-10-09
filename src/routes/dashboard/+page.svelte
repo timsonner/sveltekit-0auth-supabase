@@ -1,4 +1,12 @@
 <h1>Welcome to the dashboard</h1>
+<script>
+  import Profile from "$lib/Profile.svelte";
+</script>
+
+
+<div class="container">
+  <Profile />
+</div>
 
 <style>
   h1 {
