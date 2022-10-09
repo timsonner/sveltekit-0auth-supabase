@@ -1,6 +1,8 @@
-## This project is using the latest SvelteKit as of 10/08/2022
+# Signup or login using Supabase Auth
 
-Visit the latest deployment of this repo <https://sveltekit-0auth-supabase.vercel.app/>
+## This project is using the latest SvelteKit as of 10/08/2022
+Visit the latest deployment of this repo  
+<https://sveltekit-0auth-supabase.vercel.app/>
 ## install project dependencies
 > npm install
 
@@ -24,4 +26,6 @@ Visit the latest deployment of this repo <https://sveltekit-0auth-supabase.verce
 
 > npm run dev -- --open
 
-partial code source: <https://github.com/rboddy/supabase-yt-auth>
+partial code source:
+<https://github.com/rboddy/supabase-yt-auth>  
+<https://supabase.com/docs/guides/with-sveltekit>
