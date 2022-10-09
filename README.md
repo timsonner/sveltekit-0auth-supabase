@@ -1,5 +1,6 @@
 ## This project is using the latest SvelteKit as of 10/08/2022
 
+Visit the latest deployment of this repo <https://sveltekit-0auth-supabase.vercel.app/>
 ## install project dependencies
 > npm install
 
